@@ -56,9 +56,14 @@ const Conversation = ({
         left={"50%"}
         transform={"translate(-50%, -50%)"}
       >
-        <Box boxSize={75}>
-          <MicrophoneIcon color={"#ddfafa"} muted={status !== "connected"} />
-        </Box>
+        {/* <MicrophoneIcon color={"#ddfafa"} muted={status !== "connected"} /> */}
+        <img
+          height="200"
+          width="200"
+          src="/logo.png"
+          alt="logo"
+          style={{ opacity: status !== "connected" ? 0.2 : 0.8 }}
+        ></img>
       </Button>
       <Box boxSize={50} />
       {status === "connecting" && (
